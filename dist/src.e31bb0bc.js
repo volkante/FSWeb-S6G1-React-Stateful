@@ -577,7 +577,6 @@ if ("development" !== "production") {
         }
       }
     }
-
     function getWrappedName(outerType, innerType, wrapperName) {
       var displayName = outerType.displayName;
       if (displayName) {
@@ -652,7 +651,6 @@ if ("development" !== "production") {
           // eslint-disable-next-line no-fallthrough
         }
       }
-
       return null;
     }
     var hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -1146,7 +1144,6 @@ if ("development" !== "production") {
       mapChildren(children, function () {
         n++; // Don't return anything
       });
-
       return n;
     }
 
@@ -1651,7 +1648,6 @@ if ("development" !== "production") {
           });
           /* eslint-enable react-internal/no-production-logging */
         }
-
         disabledDepth++;
       }
     }
@@ -1691,7 +1687,6 @@ if ("development" !== "production") {
           });
           /* eslint-enable react-internal/no-production-logging */
         }
-
         if (disabledDepth < 0) {
           error('disabledDepth fell below zero. ' + 'This is a bug in React. Please file an issue.');
         }
@@ -2984,7 +2979,6 @@ if ("development" !== "production") {
         isMessageLoopRunning = false;
       } // Yielding to the browser will give it a chance to paint, so we can
     };
-
     var schedulePerformWorkUntilDeadline;
     if (typeof localSetImmediate === 'function') {
       // Node.js and old IE.
@@ -3313,7 +3307,6 @@ if ("development" !== "production") {
         }
       }
     }
-
     function checkKeyStringCoercion(value) {
       {
         if (willCoercionThrow(value)) {
@@ -3322,7 +3315,6 @@ if ("development" !== "production") {
         }
       }
     }
-
     function checkPropStringCoercion(value, propName) {
       {
         if (willCoercionThrow(value)) {
@@ -3331,7 +3323,6 @@ if ("development" !== "production") {
         }
       }
     }
-
     function checkCSSPropertyStringCoercion(value, propName) {
       {
         if (willCoercionThrow(value)) {
@@ -3340,7 +3331,6 @@ if ("development" !== "production") {
         }
       }
     }
-
     function checkHtmlStringCoercion(value) {
       {
         if (willCoercionThrow(value)) {
@@ -3349,7 +3339,6 @@ if ("development" !== "production") {
         }
       }
     }
-
     function checkFormFieldValueStringCoercion(value) {
       {
         if (willCoercionThrow(value)) {
@@ -3979,7 +3968,6 @@ if ("development" !== "production") {
           });
           /* eslint-enable react-internal/no-production-logging */
         }
-
         disabledDepth++;
       }
     }
@@ -4019,7 +4007,6 @@ if ("development" !== "production") {
           });
           /* eslint-enable react-internal/no-production-logging */
         }
-
         if (disabledDepth < 0) {
           error('disabledDepth fell below zero. ' + 'This is a bug in React. Please file an issue.');
         }
@@ -4350,7 +4337,6 @@ if ("development" !== "production") {
           // eslint-disable-next-line no-fallthrough
         }
       }
-
       return null;
     }
     function getWrappedName$1(outerType, innerType, wrapperName) {
@@ -5433,7 +5419,6 @@ if ("development" !== "production") {
       if (!isCustomProperty && typeof value === 'number' && value !== 0 && !(isUnitlessNumber.hasOwnProperty(name) && isUnitlessNumber[name])) {
         return value + 'px'; // Presumes implicit 'px' suffix for unitless numbers
       }
-
       {
         checkCSSPropertyStringCoercion(value, name);
       }
@@ -10241,7 +10226,6 @@ if ("development" !== "production") {
       return x === y && (x !== 0 || 1 / x === 1 / y) || x !== x && y !== y // eslint-disable-line no-self-compare
       ;
     }
-
     var objectIs = typeof Object.is === 'function' ? Object.is : is;
 
     /**
@@ -12952,7 +12936,6 @@ if ("development" !== "production") {
       // }
       // return value;
     }
-
     function registerSuspenseInstanceRetry(instance, callback) {
       instance._reactRetry = callback;
     }
@@ -13259,7 +13242,6 @@ if ("development" !== "production") {
               // below since it will bail out on the isMounted check later.
             }
           }
-
           return targetInst;
         }
         targetNode = parentNode;
@@ -16957,7 +16939,6 @@ if ("development" !== "production") {
         return true;
       } // If it's a boundary we should avoid, then we prefer to bubble up to the
     }
-
     function findFirstSuspended(row) {
       var node = row;
       while (node !== null) {
@@ -19296,7 +19277,6 @@ if ("development" !== "production") {
             // For a more detailed description of this block, see:
             // https://github.com/facebook/react/pull/13384
           }
-
           var componentName = source ? getComponentNameFromFiber(source) : null;
           var componentNameMessage = componentName ? "The above error occurred in the <" + componentName + "> component:" : 'The above error occurred in one of your React components:';
           var errorBoundaryMessage;
@@ -19702,7 +19682,6 @@ if ("development" !== "production") {
         return null;
       } // This function is called when a Suspense boundary suspends. It returns the
     }
-
     var ReactCurrentOwner$1 = ReactSharedInternals.ReactCurrentOwner;
     var didReceiveUpdate = false;
     var didWarnAboutBadClass;
@@ -22329,7 +22308,6 @@ if ("development" !== "production") {
                   throw new Error('We must have new props for new mounts. This error is likely ' + 'caused by a bug in React. Please file an issue.');
                 } // This can happen when we abort work.
               }
-
               var _rootContainerInstance = getRootHostContainer();
               var _currentHostContext = getHostContext();
               var _wasHydrated2 = popHydrationState(workInProgress);
@@ -22367,7 +22345,6 @@ if ("development" !== "production") {
                 }
               } // Continue with the normal Suspense path.
             }
-
             if ((workInProgress.flags & DidCapture) !== NoFlags) {
               // Something suspended. Re-render with the fallback children.
               workInProgress.lanes = renderLanes; // Do not reset the effect list.
@@ -25367,7 +25344,6 @@ if ("development" !== "production") {
                 // concurrent events.
               }
             }
-
             if (exitStatus === RootFatalErrored) {
               var _fatalError = workInProgressRootFatalError;
               prepareFreshStack(root, NoLanes);
@@ -26396,7 +26372,6 @@ if ("development" !== "production") {
           ReactCurrentBatchConfig$3.transition = prevTransition; // Once passive effects have run for the tree - giving components a
         }
       }
-
       return false;
     }
     function enqueuePendingPassiveProfilerEffect(fiber) {
@@ -26840,7 +26815,6 @@ if ("development" !== "production") {
         }
       }
     }
-
     var fakeActCallbackNode = {};
     function scheduleCallback$1(priorityLevel, callback) {
       {
@@ -28896,9 +28870,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = Sayac;
-var _react = _interopRequireDefault(require("react"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-/*
+var _react = _interopRequireWildcard(require("react"));
+function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
+function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; } /*
 SAYAÇ Talimatları
 
 Aşağıdaki kısa videoyu izleyin, UI ve Chrome Devtools'a dikkat edin:
@@ -28943,32 +28923,35 @@ ADIM 5:
 
 ADIM 6:
 	Bu click handler 'sayici' yı sıfırlamak için 'setSayici' yi kullanacak.
-*/
-
-/* ADIM 0 buraya*/
-
+*/ /* ADIM 0 buraya*/
 function Sayac() {
   /* ADIM 1 buraya*/
-
+  var _useState = (0, _react.useState)(0),
+    _useState2 = _slicedToArray(_useState, 2),
+    sayici = _useState2[0],
+    setSayici = _useState2[1];
   var artirici = function artirici() {
     /* ADIM 4 buraya */
+    setSayici(sayici + 1);
   };
   var azaltici = function azaltici() {
     /* ADIM 5 */
+    setSayici(sayici - 1);
   };
-  var reset = function reset() {};
+  var reset = function reset() {
+    setSayici(0);
+  };
   var stil = {
-    fontSize: '1.5em',
-    marginBottom: '0.3em',
-    color: 'royalblue' /* ADIM 2 */
+    fontSize: "1.5em",
+    marginBottom: "0.3em",
+    color: sayici % 2 ? "crimson" : "royalblue" /* ADIM 2 */
   };
-
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "widget-counter container"
   }, /*#__PURE__*/_react.default.createElement("h2", null, "Saya\xE7"), /*#__PURE__*/_react.default.createElement("div", {
     id: "sayici",
     style: stil
-  }, "Say\u0131 ", sayici, " "), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
+  }, sayici, " ", sayici % 2 ? "tek" : "çift", " "), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
     id: "artirici",
     onClick: artirici
   }, "Art\u0131r\u0131c\u0131"), /*#__PURE__*/_react.default.createElement("button", {
@@ -28986,9 +28969,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = Input;
-var _react = _interopRequireDefault(require("react"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-/*
+var _react = _interopRequireWildcard(require("react"));
+function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
+function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; } /*
 INPUT Talimatlar
 
 Şu kısa videoyu izleyin:
@@ -29022,38 +29011,41 @@ ADIM 6:
   Inputun başarılı bir şekilde resetlemesi için değerini state'ten almalıdır!
   <input /> öğesine şu şekilde fazladan bir prop eklememiz gerekiyor: value={inputDeğeri}
 */
-
 /* ADIM 0 */
 
 function Input() {
   /* ADIM 1 */
-
+  var _useState = (0, _react.useState)(""),
+    _useState2 = _slicedToArray(_useState, 2),
+    inputValue = _useState2[0],
+    setInputValue = _useState2[1];
   var inputuDeğiştir = function inputuDeğiştir(evt) {
     // When the input changes, its whole value can be found inside the event object.
     // Log out the synthetic event object 'evt' and see for yourself.
-    var value = evt.target.value;
-
+    console.log(evt);
+    console.log(evt.target);
+    setInputValue(evt.target.value);
     /* ADIM 4 */
   };
-
   var reset = function reset() {
     /* ADIM 5 */
+    setInputValue("");
   };
   var stil = {
-    fontSize: '1.5em',
-    marginBottom: '0.3em',
-    color: 'crimson' /* ADIM 2 */
+    fontSize: "1.5em",
+    marginBottom: "0.3em",
+    color: inputValue.length > 10 ? "crimson" : null /* ADIM 2 */
   };
-
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "widget-input container"
   }, /*#__PURE__*/_react.default.createElement("h2", null, "Input"), /*#__PURE__*/_react.default.createElement("div", {
     id: "output",
     style: stil
-  }), " ", /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("input", {
+  }, inputValue.toUpperCase()), " ", /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("input", {
     id: "input",
     type: "text",
-    onChange: inputuDeğiştir
+    onChange: inputuDeğiştir,
+    value: inputValue
   }), " ", /*#__PURE__*/_react.default.createElement("button", {
     id: "resetInput",
     onClick: reset
@@ -29066,9 +29058,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = RuhHalleri;
-var _react = _interopRequireDefault(require("react"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-/*
+var _react = _interopRequireWildcard(require("react"));
+function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
+function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; } /*
 RuhHalleri Talimatları
 
 Aşağıdaki kısa videoyu izleyin:
@@ -29095,37 +29093,39 @@ ADIM 3:
 
 ADIM 4, 5, 6:
   Click handler içinde `setRuhHali` ni kulanarak aşağıda tanımlanmış değişkenleri kullanarak ruhHali'ni güncelleyin
-*/
-
-/* ADIM 0 */
-
-var ilkRuhHali = 'Nasıl hissettiğimi bilmiyorum :-|';
-var mutluRuhHali = 'Oldukça mutlu :)';
-var uzgunRuhHali = 'Oldukça üzgün :(';
+*/ /* ADIM 0 */
+var ilkRuhHali = "Nasıl hissettiğimi bilmiyorum :-|";
+var mutluRuhHali = "Oldukça mutlu :)";
+var uzgunRuhHali = "Oldukça üzgün :(";
 function RuhHalleri() {
   /* ADIM 1 */
-
+  var _useState = (0, _react.useState)(ilkRuhHali),
+    _useState2 = _slicedToArray(_useState, 2),
+    mood = _useState2[0],
+    setMood = _useState2[1];
   var mutluEt = function mutluEt() {
     /* ADIM 4 */
+    setMood(mutluRuhHali);
   };
   var uZ = function uZ() {
     /* ADIM 5 */
+    setMood(uzgunRuhHali);
   };
   var reset = function reset() {
     /* ADIM 6 */
+    setMood(ilkRuhHali);
   };
   var stil = {
-    fontSize: '1.5em',
-    marginBottom: '0.3em',
-    color: 'royalblue' /* ADIM 2 */
+    fontSize: "1.5em",
+    marginBottom: "0.3em",
+    color: mood === mutluRuhHali ? "royalblue" : "crimson" /* ADIM 2 */
   };
-
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "widget-moods container"
   }, /*#__PURE__*/_react.default.createElement("h2", null, "RuhHalleri"), /*#__PURE__*/_react.default.createElement("div", {
     id: "ruhHali",
     style: stil
-  }, "'Nas\u0131l hissetti\u011Fimi bilmiyorum :-|'"), " ", /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
+  }, mood), " ", /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
     id: "mutluEt",
     onClick: mutluEt
   }, "Mutlu Et"), /*#__PURE__*/_react.default.createElement("button", {
@@ -29143,9 +29143,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = Dondurucu;
-var _react = _interopRequireDefault(require("react"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-/*
+var _react = _interopRequireWildcard(require("react"));
+function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
+function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; } /*
 Döndürücü Talimatlar
 
 Şu kısa videoyu izleyin:
@@ -29181,24 +29187,27 @@ ADIM 4:
   Bu click handlerın, "açık olup olmadığını" şu anda olduğunun tersi olacak şekilde ayarlayarak döndürücüyü değiştirmesi gerekir.
   "not" için kullandığımız operatörü hatırlıyor musunuz??
 */
-
 /* STEP 0 */
 
 function Dondurucu() {
   /* ADIM 1 */
-
+  var _useState = (0, _react.useState)(true),
+    _useState2 = _slicedToArray(_useState, 2),
+    spinnerOpen = _useState2[0],
+    setSpinnerOpen = _useState2[1];
   var toggleDondurucu = function toggleDondurucu() {
     /* ADIM 4 */
+    setSpinnerOpen(!spinnerOpen);
   };
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "widget-spinner container"
-  }, /*#__PURE__*/_react.default.createElement("h2", null, "D\xF6nd\xFCr\xFCc\xFC"), true && /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("h2", null, "D\xF6nd\xFCr\xFCc\xFC"), spinnerOpen && /*#__PURE__*/_react.default.createElement("div", {
     id: "d\xF6nd\xFCr\xFCc\xFC",
     className: "spinner"
   }, "--+--") /* ADIM 2 */, /*#__PURE__*/_react.default.createElement("button", {
     id: "toggleDondurucu",
     onClick: toggleDondurucu
-  }, "Gizle "));
+  }, spinnerOpen ? "Gizle" : "Göster", " "));
 }
 },{"react":"../node_modules/react/index.js"}],"components/Kareler.js":[function(require,module,exports) {
 "use strict";
@@ -29207,9 +29216,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = Kareler;
-var _react = _interopRequireDefault(require("react"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-/*
+var _react = _interopRequireWildcard(require("react"));
+function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
+function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; } /*
 Kareler Talimaları
 
 Aşağıdaki kısa videoyu izleyin:
@@ -29224,26 +29239,36 @@ Herhangi bir noktada yalnızca bir kare aktif olabilir (ya da hiçbiri)
 
 Aşaıdaki yorumları takip edin.
 */
-
 //Bu değişkeni YALNIZCA bir durum dilimini yüklemek için kullanın!
-var KareIdListesi = ['sqA', 'sqB', 'sqC', 'sqD'];
+var KareIdListesi = ["sqA", "sqB", "sqC", "sqD"];
 function Kareler() {
   // State hookunu 2 defa kullanın: 'kareler' ve
   // 'aktifKare' olmak üzere. Birisi kare idlerini _dizi_ olarak tutacak, diğeri ise aktif olan
   // kareyi gözlemleyecek. Sayfa yüklendiğinde aktif kare olmayacak,
   // yani  'aktifKare' null olmalı.
-
+  var _useState = (0, _react.useState)(null),
+    _useState2 = _slicedToArray(_useState, 2),
+    aktifKare = _useState2[0],
+    setAktifKare = _useState2[1];
   var ClassAdiAl = function ClassAdiAl(id) {
     // Bu bir click handler değildir, JSX içinde kullanılan bir yardımcıdır(helper).(aşağıya bakın)
     // Eğer argüman olarak verilen id aktif kare state'indeki id ile eşleşirse, class adı 'active' olan bir string döndürecek
     // diğer durumlar için boş döndürecek.
     // Etkisini görmek için kareye sağ tıklayın ve "öğeyi inceleyin".
-    return '';
+    if (id == aktifKare) {
+      return "active";
+    }
+    return "";
   };
   var AktifEt = function AktifEt(id) {
     // Bu bir _satır içinden çağırılmış_ click handler yardımcısıdır.
     // id bağımsız değişkenini, stateteki aktif id olacak şekilde ayarlayın
     // eğer zaten aktifse, o zaman önce state i resetlemeliyiz.
+    if (aktifKare == id) {
+      setAktifKare(null);
+    } else {
+      setAktifKare(id);
+    }
   };
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "widget-squares container"
@@ -29272,9 +29297,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = Programcilar;
 exports.enIyilerListesi = void 0;
-var _react = _interopRequireDefault(require("react"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-/*
+var _react = _interopRequireWildcard(require("react"));
+function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
+function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; } /*
 Programcilar Talimatları
 
 Şu kısa videoyu izleyin:
@@ -29286,49 +29317,53 @@ Aynı zaman içinde yalnız bir harika programcıyı öne çıkarabiliriz.
 
 Yorumları takip edin.
 */
-
 /* ADIM 0  */
 
 // Bu değişkeni YALNIZCA bir state dilimini başlatmak için kullanın!
 // JSX'te şu anda bu kuralı çiğneyen bir şey var...
 // Export syntaxı, test kitaplığının diziyi içe aktarabilmesi için gereklidir.
-var enIyilerListesi = [{
-  id: '1',
-  isim: 'Ada Lovelace'
+var enIyilerListesi = exports.enIyilerListesi = [{
+  id: "1",
+  isim: "Ada Lovelace"
 }, {
-  id: '2',
-  isim: 'Grace Hopper'
+  id: "2",
+  isim: "Grace Hopper"
 }, {
-  id: '3',
-  isim: 'Evelyn Boyd Granville'
+  id: "3",
+  isim: "Evelyn Boyd Granville"
 }, {
-  id: '4',
-  isim: 'Mary Kenneth Keller'
+  id: "4",
+  isim: "Mary Kenneth Keller"
 }, {
-  id: '5',
-  isim: 'Frances Allen'
+  id: "5",
+  isim: "Frances Allen"
 }, {
-  id: '6',
-  isim: 'Carol Shaw'
+  id: "6",
+  isim: "Carol Shaw"
 }];
-exports.enIyilerListesi = enIyilerListesi;
 function Programcilar() {
   // İki state dilimine ihtiyacımız olduğundan, state hooku iki kez kullanmamız gerekecek..
   // Bir yanda programcılar listesi, diğer yanda öne çıkan programcının idsi.
-
+  var _useState = (0, _react.useState)(null),
+    _useState2 = _slicedToArray(_useState, 2),
+    name = _useState2[0],
+    setName = _useState2[1];
+  var _useState3 = (0, _react.useState)(null),
+    _useState4 = _slicedToArray(_useState3, 2),
+    id = _useState4[0],
+    setId = _useState4[1];
   var oneCikaninIsmi = function oneCikaninIsmi() {
     // Bunu sona bırakın!
     // Bu bir event handler değil, yardımcıdır. Kullanımını JSX'te gözlemleyin.
     // Öne çıkan geliştiricinin _isim_ adını döndürmek için her iki state dilimini kullanacak.
-    // Closureların güzelliği, argümanlar yoluyla bilgi enjekte etmeye gerek kalmadan programın 
+    // Closureların güzelliği, argümanlar yoluyla bilgi enjekte etmeye gerek kalmadan programın
     // bu bölgesinden her iki state dilimini de "görebilmemiz"dir.
   };
   var stil = {
-    fontSize: '1.5em',
-    marginTop: '0.5em',
-    color: 'royalblue' // 🤔 kutlarken renk gold'a dönecek
+    fontSize: "1.5em",
+    marginTop: "0.5em",
+    color: "royalblue" // 🤔 kutlarken renk gold'a dönecek
   };
-
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "widget-programmers container"
   }, /*#__PURE__*/_react.default.createElement("h2", null, "Programc\u0131lar"), /*#__PURE__*/_react.default.createElement("div", {
@@ -29343,7 +29378,10 @@ function Programcilar() {
       className: "programmer",
       key: dev.id
     }, dev.isim, " ", /*#__PURE__*/_react.default.createElement("button", {
-      onClick: function onClick() {/* burada dev.id 'yi öne çıkan id'ye atayın */}
+      onClick: function onClick() {
+        /* burada dev.id 'yi öne çıkan id'ye atayın */
+        setName(dev.id);
+      }
     }, "Kutla"));
   })), /*#__PURE__*/_react.default.createElement("div", {
     id: "featured",
@@ -29352,7 +29390,7 @@ function Programcilar() {
   // Üçlüler, bir şeyin "gerçekliğine" bağlı olarak "bir şeyi veya diğerini" ifade etmek için harikadır..
   // Sözde-kod: öne çıkan true ise metin 1'i oluşturun, aksi takdirde metin 2'yi oluşturun..
   // Sabit kodlanmış false'u doğru değişkenle değiştirin.
-  false ? "\uD83C\uDF89 Hadi ".concat(oneCikaninIsmi(), "'\u0131 kutlayal\u0131m! \uD83E\uDD73") : 'Harika bir programcı seçin'));
+  false ? "\uD83C\uDF89 Hadi ".concat(oneCikaninIsmi(), "'\u0131 kutlayal\u0131m! \uD83E\uDD73") : "Harika bir programcı seçin"));
 }
 },{"react":"../node_modules/react/index.js"}],"index.js":[function(require,module,exports) {
 "use strict";
@@ -29394,7 +29432,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64069" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60868" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
