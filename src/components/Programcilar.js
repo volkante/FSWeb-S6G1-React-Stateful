@@ -29,8 +29,7 @@ export const enIyilerListesi = [
 export default function Programcilar() {
   // İki state dilimine ihtiyacımız olduğundan, state hooku iki kez kullanmamız gerekecek..
   // Bir yanda programcılar listesi, diğer yanda öne çıkan programcının idsi.
-  const [name, setName] = useState(null);
-  const [id, setId] = useState(null);
+  const [secilenProgramci, setSecilenProgramci] = useState(null);
 
   const oneCikaninIsmi = () => {
     // Bunu sona bırakın!
@@ -38,12 +37,17 @@ export default function Programcilar() {
     // Öne çıkan geliştiricinin _isim_ adını döndürmek için her iki state dilimini kullanacak.
     // Closureların güzelliği, argümanlar yoluyla bilgi enjekte etmeye gerek kalmadan programın
     // bu bölgesinden her iki state dilimini de "görebilmemiz"dir.
+    for (let person of enIyilerListesi) {
+      if (secilenProgramci === person.id) {
+        return person.isim;
+      }
+    }
   };
 
   const stil = {
     fontSize: "1.5em",
     marginTop: "0.5em",
-    color: "royalblue", // 🤔 kutlarken renk gold'a dönecek
+    color: secilenProgramci ? "gold" : "royalblue", // 🤔 kutlarken renk gold'a dönecek
   };
 
   return (
@@ -61,7 +65,7 @@ export default function Programcilar() {
               <button
                 onClick={() => {
                   /* burada dev.id 'yi öne çıkan id'ye atayın */
-                  setName(dev.id);
+                  setSecilenProgramci(dev.id);
                 }}
               >
                 Kutla
@@ -75,7 +79,7 @@ export default function Programcilar() {
           // Üçlüler, bir şeyin "gerçekliğine" bağlı olarak "bir şeyi veya diğerini" ifade etmek için harikadır..
           // Sözde-kod: öne çıkan true ise metin 1'i oluşturun, aksi takdirde metin 2'yi oluşturun..
           // Sabit kodlanmış false'u doğru değişkenle değiştirin.
-          false
+          secilenProgramci
             ? `🎉 Hadi ${oneCikaninIsmi()}'ı kutlayalım! 🥳`
             : "Harika bir programcı seçin"
         }
