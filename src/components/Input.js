@@ -75,7 +75,7 @@ export default function Input() {
         />{" "}
         {/* ADIM 6 */}
         <button id="resetInput" onClick={reset}>
-          Reset
+          Resetto
         </button>
       </div>
     </div>
